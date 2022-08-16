@@ -1,0 +1,88 @@
+/* HERO-SECTION - location-form */
+
+.location-form {
+    @include flex-center;
+    height: 40px;
+    padding-bottom: 5px;
+    background-color: $location-form-bg;
+    color: $text-color-dark;
+    input {
+        width: 150px;
+        border: none;
+        background-color: $location-form-bg;
+    }
+    i {
+        margin-right: 15px;
+    }
+}
+
+/*HERO-SECTION - content*/
+
+.hero-section-content {
+    text-align: center;
+    height:100%;
+    padding: 40px 0 60px 0;
+    background-color: $primary-bg;
+    h1 {
+        padding: 0 18.5% 10px;
+        margin : 0;
+    }
+    p {
+        padding: 0 9% 30px;
+        margin: 0;
+        font-weight: 300;
+        font-size: 18px;
+        color: $text-color-dark;
+    }
+}
+
+/* USE-SECTION*/
+
+.use-section {
+    margin: 45px 5% 70px 8%;
+    h2 {
+        margin: 0 0 10px -12px;
+    }
+}
+
+.use-section-steps {
+    display: flex;
+    align-items: center;
+    height: 75px;
+    max-width: 500px;
+    min-width: 285px;
+    margin-top: 25px;
+    background-color: $primary-bg;
+    border-radius: 20px;
+    @include shadow;
+    p {
+        @include flex-center;
+        width: 25px;
+        height: 25px;
+        margin: 0 0 0 -12px;
+        color: $text-color-light;
+        background-color: $primary-color;
+        border-radius: 25px;
+    }
+    i {
+        margin: 0 25px;
+        font-size: 20px;
+        color: #7E7E7E;
+    }
+    &:hover {
+        background: lighten($primary-color, 35%);
+    }
+    &:hover > i {
+        color: $primary-color
+    }
+}
+
+/*RESTAURANT-SECTION */
+
+.restaurant-section {
+    padding: 35px 5% 45px;
+    background-color: $primary-bg;
+}
+    
+
+

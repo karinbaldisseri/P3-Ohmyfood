@@ -1,0 +1,56 @@
+article {
+    height: 250px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background-color: $secondary-bg;
+    border-radius: 15px;
+    @include shadow;
+}
+
+.restaurant-img-container {
+    position: relative;
+    height: 172px;
+    img {
+        height: 100%;
+        width: 100%;
+        object-position: bottom;
+        border-radius: 15px 15px 0 0;
+    }
+    .second-image {
+        object-position: 50% 62%;
+    }
+    p {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        padding: 6px 12px;
+        font-size: 14px;
+        font-weight: 500;
+        color: darken($tertiary-color, 35%);
+        background-color: $tertiary-color;
+        border-radius: 2px;
+    }
+}
+
+.restaurant-content {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 10px 5px 10px;
+    border-radius: 0 0 15px 15px;
+    h3 {
+        margin: 17px 0 5px 0;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    p {
+        margin: 0;
+        font-size: 17px;
+        font-weight: 300;
+    }
+    i {
+        padding: 20px 15px;
+        font-size: 24px;
+        color: $text-color-dark;
+    }
+}

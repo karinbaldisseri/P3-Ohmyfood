@@ -1,0 +1,11 @@
+.btn {
+    height: 50px;
+    padding: 0 20px;
+    color: $text-color-light;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(175deg, $secondary-color, $primary-color) ;
+    @include shadow;
+}

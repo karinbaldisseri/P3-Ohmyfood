@@ -1,0 +1,13 @@
+header {
+    @include flex-center;
+    height: 53px;
+    width:100%;
+    margin-bottom: 4px;
+    padding-top: 9px;
+    background-color: $secondary-bg;
+    box-shadow: 1px 0 5px 4px rgba(0, 0, 0, 0.2);
+    img {
+        height: 28px;
+        max-width:44%;
+    }
+}
