@@ -43,18 +43,38 @@
     h2 {
         margin: 0 0 10px -12px;
     }
+    @include tablets {
+    margin: 0;
+    padding: 45px 5% 70px;
+    h2{
+        margin-left: 0;
+        }   
+    .use-section-steps-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        column-gap: 30px;
+        }
+    }
 }
+
+
+
+
+
 
 .use-section-steps {
     display: flex;
     align-items: center;
     height: 75px;
-    max-width: 500px;
-    min-width: 285px;
+    /*max-width: 400px;*/
     margin-top: 25px;
     background-color: $primary-bg;
     border-radius: 20px;
     @include shadow;
+    @include tablets {
+        min-width: 310px;
+    }
     p {
         @include flex-center;
         width: 25px;
@@ -80,9 +100,21 @@
 /*RESTAURANT-SECTION */
 
 .restaurant-section {
-    padding: 35px 5% 45px;
+    padding: 50px 5% 45px;
     background-color: $primary-bg;
+    h2 {
+        margin: 0 0 20px 0;
+    }
 }
     
-
+.restaurant-cards-container {
+    width: 100%;
+    @include tablets {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+        
+    }
+}
 

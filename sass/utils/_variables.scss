@@ -1,23 +1,26 @@
-/* COLORS */
-
-/* Main colors */
+// COLORS 
+// Main colors 
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 
-/* Text colors */
+// Text colors 
 $text-color-dark: #3F3F3F;
 $text-color-light: white;
 
-/* Back-ground colors */
+// Back-ground colors 
 $primary-bg: #F6F6F7;
 $secondary-bg: white;
 $location-form-bg: #EAEAEB;
 $footer-bg: #343535;
 
-
-/* FONTS */
-
+// FONTS 
 $header-font: Shrikhand, serif;
 $text-font: Roboto, sans-serif;
 
+
+// MEDIA QUERIES variables
+$breakpoints: (
+    tablet: 599px,
+    desktop: 992px
+);

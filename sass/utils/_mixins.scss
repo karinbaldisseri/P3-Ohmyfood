@@ -7,3 +7,16 @@
     justify-content: center;
     align-items: center;
 }
+
+// media queries mixins
+@mixin tablets {
+    @media all and (min-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin desktops {
+    @media all and (min-width: map-get($breakpoints, desktop)){
+        @content;
+    }
+}

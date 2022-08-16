@@ -18,4 +18,7 @@ footer {
             margin-right: 8px;
             font-size: 13px;
         }
+    @include tablets {
+        padding: 25px 5% 40px;
+    }
 }
