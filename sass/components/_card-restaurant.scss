@@ -1,4 +1,6 @@
-article {
+/* RESTAURANT INFO CARD - Home page*/
+
+.restaurant-card {
     height: 250px;
     width: 100%;
     max-width: 430px;
@@ -30,7 +32,7 @@ article {
     .second-image {
         object-position: 50% 62%;
     }
-    p {
+    .new {
         position: absolute;
         top: 0;
         right: 10px;

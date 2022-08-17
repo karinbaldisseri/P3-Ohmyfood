@@ -1,3 +1,5 @@
+/* BUTTONS */
+
 .btn {
     height: 50px;
     padding: 0 20px;
@@ -8,4 +10,10 @@
     border: none;
     background: linear-gradient(175deg, $secondary-color, $primary-color) ;
     @include shadow;
+    cursor: pointer;
+}
+
+.order-btn {
+    width: 185px;
+    margin-top: 10px;
 }

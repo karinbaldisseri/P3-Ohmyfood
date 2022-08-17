@@ -1,0 +1,47 @@
+/* CARDS DISH-MENU Restaurant-pages */
+
+.dish-menu {
+    width: 100%;
+    margin-bottom: 40px;
+    color: $text-color-dark;
+    h2 {
+        margin: 0 0 21px 10px;
+        font-size: 16px;
+        font-weight: 300;
+        text-transform: uppercase;
+        position: relative;
+        &:after {
+            content: '';
+            width: 40px;
+            height: 1px;
+            position: absolute;
+            bottom: -7px;
+            left: 0;
+            border-bottom: 3px solid $tertiary-color;
+        }
+    }
+}
+
+.dish-card {
+    margin-top: 17px;
+    padding: 12px 20px 12px 10px;
+    background-color: $secondary-bg;
+    border-radius: 15px;
+    @include shadow;
+    h3 {
+        margin: 0 0 5px 0;
+        font-size: 18px;
+    }
+    .dish-card-text {
+        display: flex;
+        justify-content: space-between;
+    }
+    p {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 300;
+    }
+    .price {
+        font-weight: 600;
+    }
+}
