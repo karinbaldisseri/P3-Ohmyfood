@@ -186,6 +186,14 @@ header img {
   box-shadow: none;
   justify-content: space-between;
 }
+@media all and (min-width: 599px) {
+  .restaurant-header {
+    justify-content: space-around;
+  }
+  .restaurant-header i {
+    margin: 0;
+  }
+}
 .restaurant-header i {
   margin-left: 25px;
   font-size: 20px;
@@ -350,6 +358,16 @@ footer i {
   height: 270px;
   object-fit: cover;
 }
+@media all and (min-width: 599px) {
+  .img-section img {
+    object-position: 50% 70%;
+  }
+}
+@media all and (min-width: 992px) {
+  .img-section img {
+    object-position: 50% 65%;
+  }
+}
 
 /* RESTAURANT MENU SECTION */
 .restaurant-menu-section {
@@ -364,6 +382,16 @@ footer i {
 .restaurant-menu-section .restaurant-title {
   display: flex;
   justify-content: space-between;
+}
+@media all and (min-width: 599px) {
+  .restaurant-menu-section .restaurant-title {
+    margin: 0 5%;
+  }
+}
+@media all and (min-width: 992px) {
+  .restaurant-menu-section .restaurant-title {
+    margin: 0 12%;
+  }
 }
 .restaurant-menu-section h1 {
   font-family: Shrikhand, serif;
@@ -380,9 +408,17 @@ footer i {
 
 .menu-cards-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
   box-sizing: border-box;
+}
+@media all and (min-width: 599px) {
+  .menu-cards-container {
+    max-width: 600px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

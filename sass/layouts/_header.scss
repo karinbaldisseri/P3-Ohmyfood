@@ -18,6 +18,12 @@ header {
 .restaurant-header {
     box-shadow: none;
     justify-content: space-between;
+    @include tablets {
+        justify-content: space-around;
+        i {
+            margin: 0;
+        }
+    }
     i {
         margin-left: 25px;
         font-size: 20px;
