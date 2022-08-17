@@ -9,14 +9,22 @@
     background-color: $secondary-bg;
     border-radius: 15px;
     @include shadow;
+    &:active {
+        @include change-shadow;
+        @include scale;
+    }
+
     @include tablets {
         margin-top: 15px;
         min-width: 300px;
         max-width: 350px;
-      
     }
     @include desktops {
         min-width: 430px;
+        &:hover {
+            @include change-shadow;
+            @include scale;
+        }
     }
 }
 

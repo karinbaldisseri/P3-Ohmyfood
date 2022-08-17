@@ -66,9 +66,6 @@
     background-color: $primary-bg;
     border-radius: 20px;
     @include shadow;
-    @include tablets {
-        min-width: 310px;
-    }
     p {
         @include flex-center;
         width: 25px;
@@ -83,11 +80,22 @@
         font-size: 20px;
         color: #7E7E7E;
     }
-    &:hover {
-        background: lighten($primary-color, 35%);
+    &:active {
+        @include change-bg-color;
     }
-    &:hover > i {
-        color: $primary-color
+    &:active > i {
+        @include change-icon-color;
+    }
+    @include tablets {
+        min-width: 310px;
+    }
+    @include desktops {
+        &:hover {
+            @include change-bg-color;
+        }
+        &:hover > i {
+            @include change-icon-color;
+        }
     }
 }
 

@@ -4,6 +4,9 @@ $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 
+$light-primary: lighten($primary-color, 3%);
+$light-secondary: lighten($secondary-color, 3%);
+
 // Text colors 
 $text-color-dark: #3F3F3F;
 $text-color-light: white;

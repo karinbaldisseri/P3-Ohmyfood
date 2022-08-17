@@ -5,12 +5,14 @@ body {
   padding: 0;
   color: inherit;
   overflow-x: hidden;
+  transition: 350ms ease-in-out;
 }
 body img {
   object-fit: cover;
 }
 body a {
   text-decoration: none;
+  color: inherit;
 }
 body li {
   list-style: none;
@@ -37,8 +39,18 @@ input, h3 {
   border-radius: 25px;
   border: none;
   background: linear-gradient(175deg, #FF79DA, #9356DC);
-  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(175deg, #ff88de, #9b63df);
+}
+@media all and (min-width: 992px) {
+  .btn:hover {
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(175deg, #ff88de, #9b63df);
+  }
 }
 
 .order-btn {
@@ -77,8 +89,11 @@ input, h3 {
   box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
 }
 .dish-card h3 {
-  margin: 0 0 5px 0;
+  margin: 0 40px 5px 0;
   font-size: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .dish-card .dish-card-text {
   display: flex;
@@ -89,8 +104,14 @@ input, h3 {
   font-size: 15px;
   font-weight: 300;
 }
+.dish-card .dish-description {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
 .dish-card .price {
   font-weight: 600;
+  margin-left: 25px;
 }
 
 /* RESTAURANT INFO CARD - Home page*/
@@ -104,6 +125,10 @@ input, h3 {
   border-radius: 15px;
   box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
 }
+.restaurant-card:active {
+  box-shadow: 2px 6px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
 @media all and (min-width: 599px) {
   .restaurant-card {
     margin-top: 15px;
@@ -114,6 +139,10 @@ input, h3 {
 @media all and (min-width: 992px) {
   .restaurant-card {
     min-width: 430px;
+  }
+  .restaurant-card:hover {
+    box-shadow: 2px 6px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
   }
 }
 
@@ -175,7 +204,7 @@ header {
   margin-bottom: 4px;
   padding-top: 9px;
   background-color: white;
-  box-shadow: 1px 0 5px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 0 6px 4px rgba(0, 0, 0, 0.2);
 }
 header img {
   height: 28px;
@@ -303,11 +332,6 @@ footer i {
   border-radius: 20px;
   box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
 }
-@media all and (min-width: 599px) {
-  .use-section-steps {
-    min-width: 310px;
-  }
-}
 .use-section-steps p {
   display: flex;
   justify-content: center;
@@ -324,11 +348,24 @@ footer i {
   font-size: 20px;
   color: #7E7E7E;
 }
-.use-section-steps:hover {
+.use-section-steps:active {
   background: #f2eafb;
 }
-.use-section-steps:hover > i {
+.use-section-steps:active > i {
   color: #9356DC;
+}
+@media all and (min-width: 599px) {
+  .use-section-steps {
+    min-width: 310px;
+  }
+}
+@media all and (min-width: 992px) {
+  .use-section-steps:hover {
+    background: #f2eafb;
+  }
+  .use-section-steps:hover > i {
+    color: #9356DC;
+  }
 }
 
 /*RESTAURANT-SECTION */
@@ -416,6 +453,11 @@ footer i {
   box-sizing: border-box;
 }
 @media all and (min-width: 599px) {
+  .menu-cards-container {
+    max-width: 550px;
+  }
+}
+@media all and (min-width: 992px) {
   .menu-cards-container {
     max-width: 600px;
   }

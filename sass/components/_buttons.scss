@@ -8,9 +8,18 @@
     font-weight: 500;
     border-radius: 25px;
     border: none;
-    background: linear-gradient(175deg, $secondary-color, $primary-color) ;
-    @include shadow;
+    background: linear-gradient(175deg, $secondary-color, $primary-color);
     cursor: pointer;
+    @include shadow;
+    &:active {
+        @include btn-effect;
+    }
+    @include desktops {
+        &:hover {
+            @include btn-effect;
+        }
+    }
+    
 }
 
 .order-btn {

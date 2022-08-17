@@ -6,11 +6,13 @@ body {
     padding: 0;
     color: inherit;
     overflow-x: hidden;
+    transition: 350ms ease-in-out;
     img{
         object-fit: cover;
     }
     a {
         text-decoration: none;
+        color: inherit;
     }
     li {
         list-style:none;

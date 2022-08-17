@@ -54,6 +54,9 @@
     margin: 0 auto;
     box-sizing: border-box;
     @include tablets {
+        max-width: 550px;
+    }
+    @include desktops {
         max-width: 600px;
     }
 }
