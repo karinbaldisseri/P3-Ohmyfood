@@ -30,6 +30,12 @@
     background: linear-gradient(175deg, $light-secondary, $light-primary);
 }
 
+@mixin heart-effect {
+    color: transparent;
+    font-weight: 900;
+    animation: 1250ms ease-out forwards fill-heart;
+}
+
 // media queries mixins
 @mixin tablets {
     @media all and (min-width: map-get($breakpoints, tablet)) {

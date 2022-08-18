@@ -58,6 +58,52 @@ input, h3 {
   margin-top: 10px;
 }
 
+.fa-heart-white {
+  background-clip: text;
+  background-image: linear-gradient(to bottom, white 50%, #9356DC 50%, #FF79DA);
+  background-size: 100% 200%;
+  background-position: top;
+}
+.fa-heart-white:active {
+  color: transparent;
+  font-weight: 900;
+  animation: 1250ms ease-out forwards fill-heart;
+}
+@media all and (min-width: 992px) {
+  .fa-heart-white:hover {
+    color: transparent;
+    font-weight: 900;
+    animation: 1250ms ease-out forwards fill-heart;
+  }
+}
+
+.fa-heart-grey {
+  background-clip: text;
+  background-image: linear-gradient(to bottom, #F6F6F7 50%, #9356DC 50%, #FF79DA);
+  background-size: 100% 200%;
+  background-position: top;
+}
+.fa-heart-grey:active {
+  color: transparent;
+  font-weight: 900;
+  animation: 1250ms ease-out forwards fill-heart;
+}
+@media all and (min-width: 992px) {
+  .fa-heart-grey:hover {
+    color: transparent;
+    font-weight: 900;
+    animation: 1250ms ease-out forwards fill-heart;
+  }
+}
+
+@keyframes fill-heart {
+  from {
+    background-position: top;
+  }
+  to {
+    background-position: bottom;
+  }
+}
 /* CARDS DISH-MENU Restaurant-pages */
 .dish-menu {
   width: 100%;
@@ -368,7 +414,7 @@ footer i {
   }
 }
 
-/*RESTAURANT-SECTION */
+/*RESTAURANT-SECTION - home page*/
 .restaurant-section {
   padding: 50px 5% 45px;
   background-color: #F6F6F7;
@@ -389,7 +435,7 @@ footer i {
   }
 }
 
-/* RESTAURANT MAIN IMG */
+/* RESTAURANT MAIN IMG - restaurant page*/
 .img-section img {
   width: 100%;
   height: 270px;
@@ -406,7 +452,7 @@ footer i {
   }
 }
 
-/* RESTAURANT MENU SECTION */
+/* RESTAURANT MENU SECTION - restaurant page*/
 .restaurant-menu-section {
   box-sizing: border-box;
   position: relative;
