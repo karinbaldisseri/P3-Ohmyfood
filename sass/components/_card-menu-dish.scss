@@ -54,3 +54,32 @@
         margin-left: 25px;
     }
 }
+
+/* MENU-PROGRESSIVE-APPEARANCE */
+
+.dish-card {
+    animation: 1500ms 3000ms ease-in-out both progressive-appearance;
+    &:first-of-type {
+        animation-delay: 250ms;
+    }
+    &:nth-of-type(2) {
+        animation-delay: 500ms;
+    }
+    &:nth-of-type(3) {
+        animation-delay: 750ms;
+    }
+    &:nth-of-type(4) {
+        animation-delay: 1000ms;
+    }
+}
+
+@keyframes progressive-appearance {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
