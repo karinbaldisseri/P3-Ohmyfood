@@ -32,9 +32,9 @@ input, h3 {
 /* BUTTONS */
 .btn {
   height: 50px;
-  padding: 0 20px;
+  padding: 16px 21px;
   color: white;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   border-radius: 25px;
   border: none;
@@ -56,6 +56,7 @@ input, h3 {
 .order-btn {
   width: 185px;
   margin-top: 10px;
+  font-size: 15px;
 }
 
 .fa-heart-white {
@@ -308,6 +309,106 @@ footer i {
   }
 }
 
+/*LOADER*/
+.loader-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  animation: close 750ms ease-in-out 2000ms forwards;
+}
+.loader-overlay .loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader-overlay h1 {
+  font-family: Shrikhand, serif;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin: 0 20px;
+}
+@media all and (min-width: 599px) {
+  .circle {
+    height: 75px;
+    width: 75px;
+    border-radius: 50px;
+  }
+}
+.circle i {
+  color: white;
+}
+@media all and (min-width: 599px) {
+  .circle i {
+    font-size: 26px;
+  }
+}
+
+.circle1 {
+  background-color: #9356DC;
+  animation: 500ms 4 slideleft;
+}
+
+.circle2 {
+  background-color: #FF79DA;
+  animation: 500ms 250ms 4 turn;
+}
+
+.circle3 {
+  background-color: #99E2D0;
+  animation: 500ms 4 slideright;
+}
+
+@keyframes slideleft {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes slideright {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes turn {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes close {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
 /* HERO-SECTION - location-form */
 .location-form {
   display: flex;
