@@ -110,6 +110,7 @@ input, h3 {
   width: 100%;
   margin-bottom: 40px;
   color: #3F3F3F;
+  box-sizing: border-box;
 }
 .dish-menu h2 {
   margin: 0 0 21px 10px;
@@ -128,14 +129,26 @@ input, h3 {
   border-bottom: 3px solid #99E2D0;
 }
 
-.dish-card {
+.dish-card-container {
+  display: flex;
+  width: 100%;
   margin-top: 17px;
-  padding: 12px 20px 12px 10px;
   background-color: white;
   border-radius: 15px;
+  box-sizing: border-box;
   box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+.dish-card {
+  display: flex;
+  flex-direction: column;
+  flex: 2 3;
+  padding: 12px 20px 12px 10px;
+  box-sizing: border-box;
+  transition: width 500ms ease-in-out;
+}
 .dish-card h3 {
+  flex-shrink: 3;
   margin: 0 40px 5px 0;
   font-size: 18px;
   text-overflow: ellipsis;
@@ -145,13 +158,18 @@ input, h3 {
 .dish-card .dish-card-text {
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
+  flex-shrink: 3;
 }
 .dish-card p {
   margin: 0;
   font-size: 15px;
   font-weight: 300;
+  box-sizing: border-box;
 }
 .dish-card .dish-description {
+  flex-shrink: 3;
+  max-width: 85%;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -159,6 +177,12 @@ input, h3 {
 .dish-card .price {
   font-weight: 600;
   margin-left: 25px;
+  flex-shrink: 0;
+}
+@media all and (max-width: 385px) {
+  .dish-card .price1 {
+    margin-left: 0;
+  }
 }
 
 /* MENU-PROGRESSIVE-APPEARANCE */
@@ -188,6 +212,38 @@ input, h3 {
     transform: translateY(0);
   }
 }
+/* CHECK ON PLATES */
+.check-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  height: 73.1px;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  flex-shrink: 0;
+  transition: width 500ms;
+}
+.check-container .fa-circle-check {
+  color: transparent;
+  font-size: 22px;
+  padding: 0;
+  transition: transform 500ms;
+}
+
+.dish-card-container:active > .check-container {
+  width: 17%;
+}
+
+.dish-card-container:active > .check-container i {
+  color: white;
+  transform: rotate(360deg);
+}
+
+.dish-card-container:active > .dish-card {
+  width: 83%;
+}
+
 /* RESTAURANT INFO CARD - Home page*/
 .restaurant-card {
   height: 250px;
@@ -266,6 +322,9 @@ input, h3 {
   padding: 20px 15px;
   font-size: 24px;
   color: #3F3F3F;
+}
+.restaurant-content a {
+  width: 80%;
 }
 
 /* Home-page HEADER */
