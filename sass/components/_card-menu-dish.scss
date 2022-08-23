@@ -117,23 +117,23 @@
     border-radius: 0 15px 15px 0;
     flex-shrink: 0;
     transition: width 500ms;
-    .fa-circle-check {
+    i {
         color: transparent;
         font-size: 22px;
         padding: 0;
         transition: transform 500ms;
-        }
+    }
 }
 
-.dish-card-container:active > .check-container {
+.dish-card-container:hover > .check-container {
     width: 17%;
 }
 
-.dish-card-container:active > .check-container i {
+.dish-card-container:hover > .check-container i {
     color: $text-color-light;
     transform: rotate(360deg);
 }
 
-.dish-card-container:active > .dish-card {
+.dish-card-container:hover > .dish-card {
     width: 83%;
 }
