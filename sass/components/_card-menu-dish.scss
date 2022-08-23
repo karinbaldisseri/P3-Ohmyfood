@@ -36,7 +36,7 @@
     display: flex;
     flex-direction: column;
     flex: 2 3;
-    padding: 12px 20px 12px 10px;
+    padding: 11px 20px 8px 10px;
     box-sizing: border-box;
     transition: width 500ms ease-in-out;
     h3 {
@@ -80,7 +80,7 @@
 
 /* MENU-PROGRESSIVE-APPEARANCE */
 
-.dish-card {
+.dish-card-container {
     animation: 1500ms 3000ms ease-in-out both progressive-appearance;
     &:first-of-type {
         animation-delay: 250ms;
@@ -112,7 +112,7 @@
 .check-container {
     @include flex-center;
     width: 0;
-    height: 73.1px;
+    height: 68.1px;
     background-color: $tertiary-color;
     border-radius: 0 15px 15px 0;
     flex-shrink: 0;
@@ -125,15 +125,15 @@
     }
 }
 
-.dish-card-container:hover > .check-container {
+.dish-card-container:active > .check-container {
     width: 17%;
 }
 
-.dish-card-container:hover > .check-container i {
+.dish-card-container:active > .check-container i {
     color: $text-color-light;
     transform: rotate(360deg);
 }
 
-.dish-card-container:hover > .dish-card {
+.dish-card-container:active > .dish-card {
     width: 83%;
 }

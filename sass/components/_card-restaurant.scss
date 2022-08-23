@@ -8,12 +8,8 @@
     box-sizing: border-box;
     background-color: $secondary-bg;
     border-radius: 15px;
+    transition: transform 250ms ease-in-out;
     @include shadow;
-    &:active {
-        @include change-shadow;
-        @include scale;
-    }
-
     @include tablets {
         margin-top: 15px;
         min-width: 300px;

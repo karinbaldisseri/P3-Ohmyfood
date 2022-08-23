@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* GENERAL SETTINGS */
 body {
   box-sizing: border-box;
@@ -59,37 +60,28 @@ input, h3 {
   font-size: 15px;
 }
 
-.fa-heart-white {
+.fa-heart {
   background-clip: text;
-  background-image: linear-gradient(to bottom, white 50%, #9356DC 50%, #FF79DA);
+  -webkit-background-clip: text;
   background-size: 100% 200%;
   background-position: top;
 }
-.fa-heart-white:active {
+
+.fa-heart-white {
+  background-image: linear-gradient(to bottom, white 50%, #9356DC 50%, #FF79DA);
+}
+
+.likebox {
+  display: none;
+}
+.likebox:checked ~ .fa-heart-white {
   color: transparent;
   font-weight: 900;
   animation: 1250ms ease-out forwards fill-heart;
 }
-@media all and (min-width: 992px) {
-  .fa-heart-white:hover {
-    color: transparent;
-    font-weight: 900;
-    animation: 1250ms ease-out forwards fill-heart;
-  }
-}
 
 .fa-heart-grey {
-  background-clip: text;
   background-image: linear-gradient(to bottom, #F6F6F7 50%, #9356DC 50%, #FF79DA);
-  background-size: 100% 200%;
-  background-position: top;
-}
-@media all and (min-width: 992px) {
-  .fa-heart-grey:hover {
-    color: transparent;
-    font-weight: 900;
-    animation: 1250ms ease-out forwards fill-heart;
-  }
 }
 
 .heartbox {
@@ -147,7 +139,7 @@ input, h3 {
   display: flex;
   flex-direction: column;
   flex: 2 3;
-  padding: 12px 20px 12px 10px;
+  padding: 11px 20px 8px 10px;
   box-sizing: border-box;
   transition: width 500ms ease-in-out;
 }
@@ -190,19 +182,19 @@ input, h3 {
 }
 
 /* MENU-PROGRESSIVE-APPEARANCE */
-.dish-card {
+.dish-card-container {
   animation: 1500ms 3000ms ease-in-out both progressive-appearance;
 }
-.dish-card:first-of-type {
+.dish-card-container:first-of-type {
   animation-delay: 250ms;
 }
-.dish-card:nth-of-type(2) {
+.dish-card-container:nth-of-type(2) {
   animation-delay: 500ms;
 }
-.dish-card:nth-of-type(3) {
+.dish-card-container:nth-of-type(3) {
   animation-delay: 750ms;
 }
-.dish-card:nth-of-type(4) {
+.dish-card-container:nth-of-type(4) {
   animation-delay: 1000ms;
 }
 
@@ -222,7 +214,7 @@ input, h3 {
   justify-content: center;
   align-items: center;
   width: 0;
-  height: 73.1px;
+  height: 68.1px;
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
   flex-shrink: 0;
@@ -235,16 +227,16 @@ input, h3 {
   transition: transform 500ms;
 }
 
-.dish-card-container:hover > .check-container {
+.dish-card-container:active > .check-container {
   width: 17%;
 }
 
-.dish-card-container:hover > .check-container i {
+.dish-card-container:active > .check-container i {
   color: white;
   transform: rotate(360deg);
 }
 
-.dish-card-container:hover > .dish-card {
+.dish-card-container:active > .dish-card {
   width: 83%;
 }
 
@@ -257,11 +249,8 @@ input, h3 {
   box-sizing: border-box;
   background-color: white;
   border-radius: 15px;
+  transition: transform 250ms ease-in-out;
   box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
-}
-.restaurant-card:active {
-  box-shadow: 2px 6px 20px rgba(0, 0, 0, 0.2);
-  transform: scale(1.02);
 }
 @media all and (min-width: 599px) {
   .restaurant-card {
@@ -337,7 +326,7 @@ header {
   justify-content: center;
   align-items: center;
   height: 53px;
-  width: 100%;
+  /*width:100%;*/
   margin-bottom: 4px;
   padding-top: 9px;
   background-color: white;
@@ -351,6 +340,7 @@ header img {
 .restaurant-header {
   box-shadow: none;
   justify-content: space-between;
+  /* élément invisible afin de placer l'icone et le logo correctement */
 }
 @media all and (min-width: 599px) {
   .restaurant-header {
@@ -417,8 +407,9 @@ footer i {
   justify-content: center;
   align-items: center;
 }
-.loader-overlay h1 {
-  font-family: Shrikhand, serif;
+.loader-overlay img {
+  height: 40px;
+  margin-top: 20px;
 }
 
 .circle {
@@ -522,15 +513,16 @@ footer i {
 .hero-section-content {
   text-align: center;
   height: 100%;
-  padding: 40px 0 60px 0;
+  padding: 40px 0 70px 0;
   background-color: #F6F6F7;
+  box-sizing: border-box;
 }
 .hero-section-content h1 {
   padding: 0 18.5% 10px;
   margin: 0;
 }
 .hero-section-content p {
-  padding: 0 9% 30px;
+  padding: 0 9% 46px;
   margin: 0;
   font-weight: 300;
   font-size: 18px;
@@ -539,7 +531,7 @@ footer i {
 
 /* USE-SECTION*/
 .use-section {
-  margin: 45px 5% 70px 8%;
+  margin: 45px 5% 65px 8%;
 }
 .use-section h2 {
   margin: 0 0 10px -12px;
@@ -625,6 +617,11 @@ footer i {
     gap: 20px;
   }
 }
+@media all and (min-width: 992px) {
+  .restaurant-cards-container {
+    gap: 35px;
+  }
+}
 
 /* RESTAURANT MAIN IMG - restaurant page*/
 .img-section img {
@@ -649,7 +646,7 @@ footer i {
   position: relative;
   z-index: 2;
   margin-top: -57px;
-  padding: 10px 15px 85px 12px;
+  padding: 10px 15px 65px 12px;
   border-radius: 30px 30px 0 0;
   background-color: #F6F6F7;
 }
