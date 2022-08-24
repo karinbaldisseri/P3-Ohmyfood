@@ -3,7 +3,6 @@
 header {
     @include flex-center;
     height: 53px;
-    /*width:100%;*/
     margin-bottom: 4px;
     padding-top: 9px;
     background-color: $secondary-bg;
@@ -29,8 +28,8 @@ header {
         font-size: 20px;
         color: $text-color-dark;
     }
-    /* élément invisible afin de placer l'icone et le logo correctement */
     .invisible {
+        /* élément invisible afin de placer l'icone et le logo correctement */
         color: transparent;
         margin: 0 25px 0 0;
     }

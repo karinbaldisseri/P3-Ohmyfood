@@ -5,6 +5,9 @@ footer {
     padding: 8px 25px 20px 25px;
     background-color: $footer-bg;
     color: $text-color-light;
+    @include tablets {
+        padding: 25px 5% 40px;
+    }
     h2 {
         font-family: $header-font;
         font-size: 18px;
@@ -21,7 +24,4 @@ footer {
             margin-right: 8px;
             font-size: 13px;
         }
-    @include tablets {
-        padding: 25px 5% 40px;
-    }
 }

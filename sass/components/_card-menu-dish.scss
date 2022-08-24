@@ -22,7 +22,8 @@
         }
     }
 }
-.dish-card-container{
+
+.dish-card-container {
     display: flex;
     width: 100%;
     margin-top: 17px;
@@ -41,6 +42,7 @@
     transition: width 500ms ease-in-out;
     h3 {
         flex-shrink: 3;
+        width: 85%;
         margin: 0 40px 5px 0;
         font-size: 18px;
         text-overflow: ellipsis;
@@ -81,18 +83,11 @@
 /* MENU-PROGRESSIVE-APPEARANCE */
 
 .dish-card-container {
-    animation: 1500ms 3000ms ease-in-out both progressive-appearance;
-    &:first-of-type {
-        animation-delay: 250ms;
-    }
-    &:nth-of-type(2) {
-        animation-delay: 500ms;
-    }
-    &:nth-of-type(3) {
-        animation-delay: 750ms;
-    }
-    &:nth-of-type(4) {
-        animation-delay: 1000ms;
+    animation: 1500ms ease-in-out both progressive-appearance;
+    @for $i from 1 through 4 {
+        &:nth-of-type(#{$i}) {
+            animation-delay: ($i * 350ms + 250ms);
+        }
     }
 }
 

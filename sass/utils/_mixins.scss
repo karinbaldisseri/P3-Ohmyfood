@@ -1,42 +1,46 @@
+// General
 @mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+// Use section
 @mixin shadow {
     box-shadow: 1px 4px 10px  rgba(0, 0, 0, 0.20);
 }
 
-@mixin change-bg-color {
-    background: lighten($primary-color, 35%);
-    
+@mixin change-bg-color ($lightness: 35%){
+    background: lighten($primary-color, $lightness);
 }
 
 @mixin change-icon-color {
     color: $primary-color;
 }
 
+// restaurant-cards on Homepage
 @mixin change-shadow {
     box-shadow: 2px 6px 20px rgba(0, 0, 0, 0.20);
 }
 
-@mixin scale {
-    transform: scale(1.02);
+@mixin scale ($size: 1.02) {
+    transform: scale($size);
 }
 
+// buttons
 @mixin btn-effect {
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);
     background: linear-gradient(175deg, $light-secondary, $light-primary);
 }
 
+// heart-icon
 @mixin heart-effect {
     color: transparent;
     font-weight: 900;
     animation: 1250ms ease-out forwards fill-heart;
 }
 
-// media queries mixins
+// media queries 
 @mixin tablets {
     @media all and (min-width: map-get($breakpoints, tablet)) {
         @content;

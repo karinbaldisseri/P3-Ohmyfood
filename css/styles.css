@@ -145,6 +145,7 @@ input, h3 {
 }
 .dish-card h3 {
   flex-shrink: 3;
+  width: 85%;
   margin: 0 40px 5px 0;
   font-size: 18px;
   text-overflow: ellipsis;
@@ -183,19 +184,19 @@ input, h3 {
 
 /* MENU-PROGRESSIVE-APPEARANCE */
 .dish-card-container {
-  animation: 1500ms 3000ms ease-in-out both progressive-appearance;
+  animation: 1500ms ease-in-out both progressive-appearance;
 }
-.dish-card-container:first-of-type {
-  animation-delay: 250ms;
+.dish-card-container:nth-of-type(1) {
+  animation-delay: 600ms;
 }
 .dish-card-container:nth-of-type(2) {
-  animation-delay: 500ms;
+  animation-delay: 950ms;
 }
 .dish-card-container:nth-of-type(3) {
-  animation-delay: 750ms;
+  animation-delay: 1300ms;
 }
 .dish-card-container:nth-of-type(4) {
-  animation-delay: 1000ms;
+  animation-delay: 1650ms;
 }
 
 @keyframes progressive-appearance {
@@ -320,75 +321,6 @@ input, h3 {
   width: 80%;
 }
 
-/* Home-page HEADER */
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 53px;
-  /*width:100%;*/
-  margin-bottom: 4px;
-  padding-top: 9px;
-  background-color: white;
-  box-shadow: 1px 0 6px 4px rgba(0, 0, 0, 0.2);
-}
-header img {
-  height: 28px;
-}
-
-/* Restaurant-page HEADER */
-.restaurant-header {
-  box-shadow: none;
-  justify-content: space-between;
-  /* élément invisible afin de placer l'icone et le logo correctement */
-}
-@media all and (min-width: 599px) {
-  .restaurant-header {
-    justify-content: space-around;
-  }
-  .restaurant-header i {
-    margin: 0;
-  }
-}
-.restaurant-header i {
-  margin-left: 25px;
-  font-size: 20px;
-  color: #3F3F3F;
-}
-.restaurant-header .invisible {
-  color: transparent;
-  margin: 0 25px 0 0;
-}
-
-/* FOOTER SETTINGS*/
-footer {
-  box-sizing: border-box;
-  padding: 8px 25px 20px 25px;
-  background-color: #343535;
-  color: white;
-}
-footer h2 {
-  font-family: Shrikhand, serif;
-  font-size: 18px;
-  font-weight: 100;
-  letter-spacing: 0.05em;
-}
-footer ul {
-  padding: 0;
-}
-footer li {
-  margin-bottom: 8px;
-}
-footer i {
-  margin-right: 8px;
-  font-size: 13px;
-}
-@media all and (min-width: 599px) {
-  footer {
-    padding: 25px 5% 40px;
-  }
-}
-
 /*LOADER*/
 .loader-overlay {
   display: flex;
@@ -490,6 +422,74 @@ footer i {
     transform: translateY(-2000px);
   }
 }
+/* Home-page HEADER */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 53px;
+  margin-bottom: 4px;
+  padding-top: 9px;
+  background-color: white;
+  box-shadow: 1px 0 6px 4px rgba(0, 0, 0, 0.2);
+}
+header img {
+  height: 28px;
+}
+
+/* Restaurant-page HEADER */
+.restaurant-header {
+  box-shadow: none;
+  justify-content: space-between;
+}
+@media all and (min-width: 599px) {
+  .restaurant-header {
+    justify-content: space-around;
+  }
+  .restaurant-header i {
+    margin: 0;
+  }
+}
+.restaurant-header i {
+  margin-left: 25px;
+  font-size: 20px;
+  color: #3F3F3F;
+}
+.restaurant-header .invisible {
+  /* élément invisible afin de placer l'icone et le logo correctement */
+  color: transparent;
+  margin: 0 25px 0 0;
+}
+
+/* FOOTER SETTINGS*/
+footer {
+  box-sizing: border-box;
+  padding: 8px 25px 20px 25px;
+  background-color: #343535;
+  color: white;
+}
+@media all and (min-width: 599px) {
+  footer {
+    padding: 25px 5% 40px;
+  }
+}
+footer h2 {
+  font-family: Shrikhand, serif;
+  font-size: 18px;
+  font-weight: 100;
+  letter-spacing: 0.05em;
+}
+footer ul {
+  padding: 0;
+}
+footer li {
+  margin-bottom: 8px;
+}
+footer i {
+  margin-right: 8px;
+  font-size: 13px;
+}
+
 /* HERO-SECTION - location-form */
 .location-form {
   display: flex;
@@ -504,6 +504,9 @@ footer i {
   width: 150px;
   border: none;
   background-color: #EAEAEB;
+}
+.location-form input:focus {
+  outline: 2px solid #99E2D0;
 }
 .location-form i {
   margin-right: 15px;
@@ -536,6 +539,12 @@ footer i {
 .use-section h2 {
   margin: 0 0 10px -12px;
 }
+.use-section .use-section-steps-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  column-gap: 30px;
+}
 @media all and (min-width: 599px) {
   .use-section {
     margin: 0;
@@ -544,17 +553,12 @@ footer i {
   .use-section h2 {
     margin-left: 0;
   }
-  .use-section .use-section-steps-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    column-gap: 30px;
-  }
 }
 
 .use-section-steps {
   display: flex;
   align-items: center;
+  min-width: 325px;
   height: 75px;
   margin-top: 25px;
   background-color: #F6F6F7;
