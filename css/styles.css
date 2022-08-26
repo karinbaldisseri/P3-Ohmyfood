@@ -64,30 +64,13 @@ input, h3 {
   background-clip: text;
   -webkit-background-clip: text;
   background-size: 100% 200%;
-  background-position: top;
-}
-
-.fa-heart-white {
-  background-image: linear-gradient(to bottom, white 50%, #9356DC 50%, #FF79DA);
-}
-
-.likebox {
-  display: none;
-}
-.likebox:checked ~ .fa-heart-white {
-  color: transparent;
-  font-weight: 900;
-  animation: 1250ms ease-out forwards fill-heart;
-}
-
-.fa-heart-grey {
-  background-image: linear-gradient(to bottom, #F6F6F7 50%, #9356DC 50%, #FF79DA);
+  background-image: linear-gradient(to bottom, transparent 50%, #9356DC 50%, #FF79DA);
 }
 
 .heartbox {
   display: none;
 }
-.heartbox:checked ~ .fa-heart-grey {
+.heartbox:checked ~ .fa-heart {
   color: transparent;
   font-weight: 900;
   animation: 1250ms ease-out forwards fill-heart;
@@ -313,7 +296,7 @@ input, h3 {
   font-weight: 300;
 }
 .restaurant-content i {
-  padding: 20px 15px;
+  margin: 20px 15px;
   font-size: 24px;
   color: #3F3F3F;
 }
@@ -649,14 +632,21 @@ footer i {
   box-sizing: border-box;
   position: relative;
   z-index: 2;
-  margin-top: -57px;
+  max-width: 525px;
+  margin: -57px auto 0 auto;
   padding: 10px 15px 65px 12px;
   border-radius: 30px 30px 0 0;
   background-color: #F6F6F7;
 }
+@media all and (min-width: 992px) {
+  .restaurant-menu-section {
+    max-width: 700px;
+  }
+}
 .restaurant-menu-section h1 {
   font-family: Shrikhand, serif;
   font-size: 27px;
+  height: 28px;
   padding-left: 10px;
   margin-bottom: 30px;
 }
@@ -665,22 +655,16 @@ footer i {
   justify-content: space-between;
   align-items: center;
 }
-.restaurant-menu-section .restaurant-title i {
-  font-size: 28px;
-  height: 40px;
-  color: #3F3F3F;
-  align-self: center;
-  padding-right: 20px;
-}
-@media all and (min-width: 599px) {
-  .restaurant-menu-section .restaurant-title {
-    margin: 0 5%;
-  }
-}
 @media all and (min-width: 992px) {
   .restaurant-menu-section .restaurant-title {
-    margin: 0 12%;
+    max-width: 500px;
+    margin: 0 auto;
   }
+}
+.restaurant-menu-section .restaurant-title i {
+  font-size: 28px;
+  color: #3F3F3F;
+  margin-right: 20px;
 }
 
 .menu-cards-container {
@@ -691,16 +675,6 @@ footer i {
   max-width: 500px;
   margin: 0 auto;
   box-sizing: border-box;
-}
-@media all and (min-width: 599px) {
-  .menu-cards-container {
-    max-width: 550px;
-  }
-}
-@media all and (min-width: 992px) {
-  .menu-cards-container {
-    max-width: 600px;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */

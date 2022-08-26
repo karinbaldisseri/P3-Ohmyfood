@@ -2,27 +2,12 @@
     background-clip: text;
     -webkit-background-clip: text;
     background-size: 100% 200%;
-    background-position: top;
-}
-
-.fa-heart-white {
-    background-image: linear-gradient(to bottom, $secondary-bg 50%, $primary-color 50%, $secondary-color);
-}
-
-.likebox {
-    display: none;
-    &:checked~.fa-heart-white {
-        @include heart-effect;
-    }
-}
-
-.fa-heart-grey {
-    background-image: linear-gradient(to bottom, $primary-bg 50%, $primary-color 50%, $secondary-color);
+    background-image: linear-gradient(to bottom, transparent 50%, $primary-color 50%, $secondary-color);
 }
 
 .heartbox {
     display: none;
-    &:checked ~ .fa-heart-grey {
+    &:checked ~ .fa-heart {
         @include heart-effect;
     }
 }
