@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/karinbaldisseri/P3-Ohmyfood-.git"
+    "url": "git+https://github.com/karinbaldisseri/P3-Ohmyfood.git"
   },
   "author": "Karin Baldisseri",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/karinbaldisseri/P3-Ohmyfood-/issues"
+    "url": "https://github.com/karinbaldisseri/P3-Ohmyfood/issues"
   },
-  "homepage": "https://github.com/karinbaldisseri/P3-Ohmyfood-#readme"
+  "homepage": "https://github.com/karinbaldisseri/P3-Ohmyfood#readme"
 }
