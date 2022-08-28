@@ -4,7 +4,12 @@ body {
     font-family: $text-font;
 }
 
-input, h3 {
+.restaurant-menu-section h1, footer h2 {
+    font-family: $header-font;
+}
+
+input,
+h3 {
     font-weight: 500;
     font-size: 16px;
     color: $text-color-dark;

@@ -11,13 +11,8 @@
     background: linear-gradient(175deg, $secondary-color, $primary-color);
     cursor: pointer;
     @include shadow;
-    &:active {
+    &:hover {
         @include btn-effect;
-    }
-    @include desktops {
-        &:hover {
-            @include btn-effect;
-        }
     }
 }
 

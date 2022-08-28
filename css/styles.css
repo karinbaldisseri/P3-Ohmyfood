@@ -24,7 +24,12 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-input, h3 {
+.restaurant-menu-section h1, footer h2 {
+  font-family: Shrikhand, serif;
+}
+
+input,
+h3 {
   font-weight: 500;
   font-size: 16px;
   color: #3F3F3F;
@@ -43,15 +48,9 @@ input, h3 {
   cursor: pointer;
   box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
 }
-.btn:active {
+.btn:hover {
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);
   background: linear-gradient(175deg, #ff88de, #9b63df);
-}
-@media all and (min-width: 992px) {
-  .btn:hover {
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);
-    background: linear-gradient(175deg, #ff88de, #9b63df);
-  }
 }
 
 .order-btn {
@@ -202,13 +201,13 @@ input, h3 {
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
   flex-shrink: 0;
-  transition: width 500ms;
+  transition: width 500ms ease-in-out;
 }
 .check-container i {
   color: transparent;
   font-size: 22px;
   padding: 0;
-  transition: transform 500ms;
+  transition: transform 500ms ease-in-out;
 }
 
 .dish-card-container:active > .check-container {
@@ -457,7 +456,6 @@ footer {
   }
 }
 footer h2 {
-  font-family: Shrikhand, serif;
   font-size: 18px;
   font-weight: 100;
   letter-spacing: 0.05em;
@@ -473,6 +471,7 @@ footer i {
   font-size: 13px;
 }
 
+/*HOME PAGE*/
 /* HERO-SECTION - location-form */
 .location-form {
   display: flex;
@@ -518,6 +517,7 @@ footer i {
 /* USE-SECTION*/
 .use-section {
   margin: 45px 5% 65px 8%;
+  background-color: white;
 }
 .use-section h2 {
   margin: 0 0 10px -12px;
@@ -610,6 +610,7 @@ footer i {
   }
 }
 
+/*RESTAURANT MENU PAGE*/
 /* RESTAURANT MAIN IMG - restaurant page*/
 .img-section img {
   width: 100%;
@@ -637,6 +638,7 @@ footer i {
   padding: 10px 15px 65px 12px;
   border-radius: 30px 30px 0 0;
   background-color: #F6F6F7;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
 }
 @media all and (min-width: 992px) {
   .restaurant-menu-section {
@@ -644,7 +646,6 @@ footer i {
   }
 }
 .restaurant-menu-section h1 {
-  font-family: Shrikhand, serif;
   font-size: 27px;
   height: 28px;
   padding-left: 10px;
